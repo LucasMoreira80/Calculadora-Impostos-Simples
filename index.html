@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- Define o documento como HTML5.-->
+<html lang="pt-BR"> <!--Inicia o documento HTML, especificando que o idioma é português do Brasil.*/-->
+
+<head> <!-- Contém informações sobre o documento.-->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8, permitindo caracteres especiais.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a visualização para dispositivos móveis.-->
+    <title>Calculadora de Impostos</title> <!--Define o título da página que aparece na aba do navegador.-->
+    <link rel="stylesheet" href="styles.css"> <!--Vincula o arquivo CSS ao HTML.-->
+</head>
+
+
+<body> <!--Define o corpo do documento, onde o conteúdo visível é colocado.-->
+    <div class="container"> <!--Um contêiner para centralizar e estilizar o conteúdo.-->
+        <h1>Calculadora de Impostos</h1>
+        <!--Cabeçalho principal da página, exibindo o título "Calculadora de Impostos"-->
+        <label class="label" for="valor">Valor:</label>
+        <!-- Cria um rótulo para o campo de entrada. O atributo for conecta o rótulo ao campo.-->
+        <input type="number" id="valor" placeholder="Digite o valor" />
+        <!--Um campo de entrada que permite a inserção de números. id é usado para identificar o campo no JavaScript.-->
+
+        <label class="label" for="taxa">Taxa de Imposto (%):</label>
+        <input type="number" id="taxa" placeholder="Digite a taxa" />
+        <!--Similar ao campo anterior, mas para a taxa de imposto.-->
+
+        <button class="button" onclick="calcularImposto()"> <!-- Botão que chama a função -->
+            <div class="blob1"></div>
+            <div class="inner">Calcular</div>
+        </button> <!--Um botão que, ao ser clicado, chama a função calcularImposto() definida no JavaScript-->
+
+        <div class="resultado" id="resultado"></div>
+        <!--Um espaço para exibir o resultado do cálculo. O id permite que o JavaScript altere seu conteúdo.-->
+    </div>
+    <script src="script.js"></script>
+    <!--Vincula o arquivo JavaScript ao HTML, permitindo que a lógica seja executada.-->
+</body>
+
+</html>
+
